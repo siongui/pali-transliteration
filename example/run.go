@@ -7,6 +7,7 @@ var mapping = map[string]string{
 	"ลิ":   "li",
 	"ลี":   "lī",
 	"ปาลิ": "pāli",
+	"สาธุ": "sādhu",
 }
 
 func main() {
