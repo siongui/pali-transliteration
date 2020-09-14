@@ -33,4 +33,4 @@ References
 .. _Pāli: https://en.wikipedia.org/wiki/Pali
 .. _romanized pali: https://www.google.com/search?q=romanized+pali
 .. _thai script: https://www.google.com/search?q=thai+script
-.. _UNLICENSE: http://unlicense.org/
+.. _UNLICENSE: https://unlicense.org/
