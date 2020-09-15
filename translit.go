@@ -1,3 +1,5 @@
+// Package palitrans provides Pāli transliteration to/from
+// Thai/Devanagari/Sinhalese/Burmese/... script.
 package palitrans
 
 import (

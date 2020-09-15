@@ -2,6 +2,22 @@
 Pāli Transliteration
 ====================
 
+.. image:: https://img.shields.io/badge/Language-Go-blue.svg
+   :target: https://golang.org/
+
+.. image:: https://godoc.org/github.com/siongui/pali-transliteration?status.svg
+   :target: https://godoc.org/github.com/siongui/pali-transliteration
+
+.. image:: https://travis-ci.org/siongui/pali-transliteration.svg?branch=master
+    :target: https://travis-ci.org/siongui/pali-transliteration
+
+.. image:: https://goreportcard.com/badge/github.com/siongui/pali-transliteration
+   :target: https://goreportcard.com/report/github.com/siongui/pali-transliteration
+
+.. image:: https://img.shields.io/badge/license-Unlicense-blue.svg
+   :target: https://github.com/siongui/pali-transliteration/blob/master/UNLICENSE
+
+
 Convert `thai script`_/Devanagari/Sinhalese/Burmese/... to/from
 romanized `Pāli`_.
 
