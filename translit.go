@@ -162,9 +162,14 @@ func RomanToThai(rm string) string {
 			i++
 		}
 	}
-	if _, ok9 := cons[i1]; ok9 {
-		output += "\u0e3a"
-	}
+
+	// Not sure if the following block is correct or not
+	/*
+		if _, ok9 := cons[i1]; ok9 {
+			output += "\u0e3a"
+		}
+	*/
+
 	//js: output = output.replace(/\`+/g, '"');
 	return output
 }
