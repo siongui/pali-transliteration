@@ -32,7 +32,7 @@ func TestRomanToThai(t *testing.T) {
 		"พุทฺเธน": "buddhena",
 		"อหํ":     "ahaṃ",
 		"พุทฺธํ":  "buddhaṃ",
-		//"สรณํ":    "saranaṃ",
+		"สรณํ":    "saraṇaṃ",
 		"คจฺฉามิ": "gacchāmi",
 		//"นโม":     "namo",
 		"ทสฺส": "dassa",
