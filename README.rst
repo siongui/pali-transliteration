@@ -1,9 +1,9 @@
-=========
-Thai Pali
-=========
+====================
+Pāli Transliteration
+====================
 
-Convert `thai script`_ to/from romanized `Pāli`_.
-(not yet started)
+Convert `thai script`_/Devanagari/Sinhalese/Burmese/... to/from
+romanized `Pāli`_.
 
 Development Environment: `Ubuntu 20.04`_ and Go_.
 
