@@ -174,12 +174,12 @@ func RomanToThai(rm string) string {
 		}
 	}
 
-	// Not sure if the following block is correct or not
-	/*
-		if _, ok9 := cons[i1]; ok9 {
-			output += "\u0e3a"
-		}
-	*/
+	// Last step: add a \u0e3a only if the last char of the input is consonant
+	last_char := CharAt(input, length(input) - 1)
+	if IsRomanConsonant(last_char) {
+		output += "\u0e3a"
+	}
+	
 
 	//js: output = output.replace(/\`+/g, '"');
 	return output
