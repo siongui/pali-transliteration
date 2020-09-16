@@ -60,7 +60,12 @@ func RomanToThai(rm string) string {
 	input := strings.Replace(strings.ToLower(rm), "ṁ", "ṃ", -1)
 
 	thair := make(map[string]string)
+
+	// thair["a"] = "อ" is misleading because อ represent "a" only in some
+	// cases. It is better to use empty consonant for อ
 	thair["a"] = "อ"
+	emptycons := thair["a"]
+
 	thair["ā"] = "า"
 	thair["i"] = "\u0e34"
 	thair["ī"] = "\u0e35"
@@ -121,11 +126,11 @@ func RomanToThai(rm string) string {
 
 		if IsRomanVowel(i1) {
 			if i1 == "o" || i1 == "e" {
-				output += thair[i1] + thair["a"]
+				output += thair[i1] + emptycons
 				i++
 			} else {
 				if i == 0 {
-					output += thair["a"]
+					output += emptycons
 				}
 				if i1 == "i" && i2 == "ṃ" { // special i.m character
 					output += thair[i1+i2]
@@ -167,7 +172,7 @@ func RomanToThai(rm string) string {
 				i++
 			}
 			if IsRomanVowel(i2) { // word-beginning vowel marker
-				output += thair["a"]
+				output += emptycons
 			}
 		} else { // a
 			i++
