@@ -23,6 +23,37 @@ func IsRomanVowel(s string) bool {
 	return ok
 }
 
+// IsRomanConsonant returns if input string is a valid consonant of Romanized
+// Pāli.
+func IsRomanConsonant(s string) bool {
+	cons := make(map[string]string)
+	cons["k"] = "1"
+	cons["g"] = "1"
+	cons["ṅ"] = "1"
+	cons["c"] = "1"
+	cons["j"] = "1"
+	cons["ñ"] = "1"
+	cons["ṭ"] = "1"
+	cons["ḍ"] = "1"
+	cons["ṇ"] = "1"
+	cons["t"] = "1"
+	cons["d"] = "1"
+	cons["n"] = "1"
+	cons["p"] = "1"
+	cons["b"] = "1"
+	cons["m"] = "1"
+	cons["y"] = "1"
+	cons["r"] = "1"
+	cons["l"] = "1"
+	cons["ḷ"] = "1"
+	cons["v"] = "1"
+	cons["s"] = "1"
+	cons["h"] = "1"
+
+	_, ok := cons[s]
+	return ok
+}
+
 // RomanToThai converts Romanized Pāli to Thai script Pāli.
 func RomanToThai(rm string) string {
 
@@ -72,30 +103,6 @@ func RomanToThai(rm string) string {
 	thair["s"] = "ส"
 	thair["h"] = "ห"
 
-	cons := make(map[string]string)
-	cons["k"] = "1"
-	cons["g"] = "1"
-	cons["ṅ"] = "1"
-	cons["c"] = "1"
-	cons["j"] = "1"
-	cons["ñ"] = "1"
-	cons["ṭ"] = "1"
-	cons["ḍ"] = "1"
-	cons["ṇ"] = "1"
-	cons["t"] = "1"
-	cons["d"] = "1"
-	cons["n"] = "1"
-	cons["p"] = "1"
-	cons["b"] = "1"
-	cons["m"] = "1"
-	cons["y"] = "1"
-	cons["r"] = "1"
-	cons["l"] = "1"
-	cons["ḷ"] = "1"
-	cons["v"] = "1"
-	cons["s"] = "1"
-	cons["h"] = "1"
-
 	var i0 = ""
 	var i1 = ""
 	var i2 = ""
@@ -134,7 +141,7 @@ func RomanToThai(rm string) string {
 				i++
 			}
 			output += thair[i1+i2]
-			if _, ok3 := cons[i3]; ok3 {
+			if IsRomanConsonant(i3) {
 				output += "\u0e3a"
 			}
 			i = i + 2
@@ -144,15 +151,13 @@ func RomanToThai(rm string) string {
 				i++
 			}
 			output += thair[i1]
-			if _, ok5 := cons[i2]; ok5 && i1 != "ṃ" {
+			if IsRomanConsonant(i2) && i1 != "ṃ" {
 				output += "\u0e3a"
 			}
 			i++
 		} else if _, ok6 := thair[i1]; !ok6 {
 			output += i1
-			_, ok7 := cons[i0]
-
-			if _, ok71 := cons[im]; ok7 || (i0 == "h" && ok71) {
+			if IsRomanConsonant(i0) || (i0 == "h" && IsRomanConsonant(im)) {
 				output += "\u0e3a"
 			}
 
