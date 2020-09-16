@@ -45,6 +45,8 @@ func TestRomanToThai(t *testing.T) {
 		"มยฺหํ":     "mayhaṃ",
 		"อคฺคิมฺหิ": "aggimhi",
 		"กึ":        "kiṃ",
+		"พุทฺธ":     "buddha",
+		"พุทฺธฺ":    "buddh",
 		"":          "",
 	}
 

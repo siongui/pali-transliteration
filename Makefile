@@ -19,7 +19,7 @@ js:
 	@gopherjs build gopherjs/*.go -m -o gopherjs/app.js
 
 test: fmt
-	go test -v
+	@go test -v
 
 fmt:
 	@echo "\033[92mGo fmt source code...\033[0m"
