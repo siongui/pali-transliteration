@@ -103,7 +103,7 @@ func RomanToThai(rm string) string {
 	thair["y"] = "ย"
 	thair["r"] = "ร"
 	thair["l"] = "ล"
-	thair["ḷ"] = "ล"
+	thair["ḷ"] = "ฬ"
 	thair["v"] = "ว"
 	thair["s"] = "ส"
 	thair["h"] = "ห"
