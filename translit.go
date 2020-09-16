@@ -6,11 +6,8 @@ import (
 	"strings"
 )
 
-// RomanToThai converts Romanized Pāli to Thai script Pāli.
-func RomanToThai(rm string) string {
-
-	input := strings.Replace(strings.ToLower(rm), "ṁ", "ṃ", -1)
-
+// IsRomanVowel returns if input string is a valid vowel of Romanized Pāli.
+func IsRomanVowel(s string) bool {
 	vowel := make(map[string]string)
 	vowel["a"] = "1"
 	vowel["ā"] = "1"
@@ -21,6 +18,15 @@ func RomanToThai(rm string) string {
 	vowel["ū"] = "1"
 	vowel["e"] = "2"
 	vowel["o"] = "2"
+
+	_, ok := vowel[s]
+	return ok
+}
+
+// RomanToThai converts Romanized Pāli to Thai script Pāli.
+func RomanToThai(rm string) string {
+
+	input := strings.Replace(strings.ToLower(rm), "ṁ", "ṃ", -1)
 
 	thair := make(map[string]string)
 	thair["a"] = "อ"
@@ -106,7 +112,7 @@ func RomanToThai(rm string) string {
 		i2 = CharAt(input, i+1)
 		i3 = CharAt(input, i+2)
 
-		if _, ok := vowel[i1]; ok {
+		if IsRomanVowel(i1) {
 			if i1 == "o" || i1 == "e" {
 				output += thair[i1] + thair["a"]
 				i++
@@ -155,7 +161,7 @@ func RomanToThai(rm string) string {
 				output += thair[i2]
 				i++
 			}
-			if _, ok8 := vowel[i2]; ok8 { // word-beginning vowel marker
+			if IsRomanVowel(i2) { // word-beginning vowel marker
 				output += thair["a"]
 			}
 		} else { // a
