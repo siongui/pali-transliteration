@@ -23,6 +23,8 @@ romanized `Pāli`_.
 
 Development Environment: `Ubuntu 20.04`_ and Go_.
 
+.. contents:: Table of Contents
+
 
 Rules for Romanized Pāli to Thai (Traditional Chinese)
 ++++++++++++++++++++++++++++++++++++++++++++++++++++++
@@ -171,6 +173,43 @@ Rules for Romanized Pāli to Thai (Traditional Chinese)
         * api 記為 อปิ （อ若單獨出現即表示無子音開頭音節的 a ）
         * āji 記為 อาชิ
         * upa 記為 อุป
+
+韻尾鼻音
+========
+
+- 巴利文中的 ṃ ，在泰文中則是以   ํ 來表示，也就是在子音上加上一點圈圈。
+- 例如 kaṃ 泰文記為 กํ (先打ก再打  ํ)， naraṃ 泰文記為 นรํ
+
+重複子音
+========
+
+- 以 bhikkhu 為例，若我們把這個詞拆分成 bhi - k  - khu，那麼按照前面的規則 bhi 在泰文記為 ภิ ，khu 在泰文記為 ขุ，但是中間剩下的 k 該怎麼表示？尤其在泰文記法中，單獨出現的子音本身都內建短母音 a 了（見上方 [01]_ ，ก 本身即表示 ka）。所以需要另一個符號   ฺ 來表達除去短母音 a的子音，這個符號是在子音下加一點。
+- 因此，bhikkhu 在泰文將記為 ภิกฺขุ (打字順序：ภ  ิ  ก  ฺ  ข  ุ)
+
+特殊拼法
+========
+
+關於 kiṃ 的拼法，雖然理論上是使用 ก + ิ + ํ ，但三個打在一起會無法正常顯示，所以他們會採用 ก + ึ  = กึ 來表示。
+
+
+更多範例
+========
+
+規則如此，現在可以來看更多範例，從範例中熟悉：
+
+- buddhena -> พุทฺเธน
+- ahaṃ -> อหํ
+- buddhaṃ saraṇaṃ gacchāmi -> พุทฺธํ สรณํ คจฺฉามิ
+- namo tassa bhagavato -> นโม ตสฺส ภควโต
+- dhammāni -> ธมฺมานิ
+- gantvā -> คนฺตฺวา
+- mhi 會記為 มฺหิ
+- yha 會記為 ยฺห
+- mayhaṃ 會記為 มยฺหํ
+- aggimhi 會記為 อคฺคิมฺหิ
+- Buddha -> พุทฺธ
+- Buddh -> พุทฺธฺ
+- 凡是一個子音後面沒有接母音的，都需要在泰文子音下加一點。
 
 
 UNLICENSE
